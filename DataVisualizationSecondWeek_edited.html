@@ -1,0 +1,128 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+ 	<head>
+ 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ 		<!--Following are the styles I thought might be useful in quickly organizing my website-->
+ 		<style>
+ 		/*Classes that I defined are NewsPiece which will be applied for as many new pieces that I'll add to 
+ 		 the website. Each NewsPiece may include but not restricted the followings: ArticleTitle (for now includes
+ 		 a link to an outside website), Summary and a relevant image*/
+ 			.ArticleTitle{
+ 				font-style:bold;
+ 				font-size:20px;
+ 				color: #0000FF;
+ 				font-family: "Georgia"
+ 			}
+ 			
+ 			.NewsPiece{
+ 				border: solid;
+ 				border-width: 2px;
+ 				width: 100%;
+ 				color: #800000
+ 			}
+ 			
+ 			.Summary{
+ 				font-size:15px;
+ 				color: #000000;
+ 				font-style: "Times New Roman"
+ 				
+ 			}
+ 			.imgDiv{
+ 				border: solid;
+ 				border-width: 1px;  
+ 				color: #000000;
+ 				width: 600px
+ 			}
+ 			
+ 			img{
+ 				width: 100%
+ 			}
+ 		</style>
+ 		<title>Somayeh's Refugee Story Collection</title>
+ 	</head>
+ 	<body>
+ 	 <!-- To separate my news pieces, I defined a class "NewsPiece". It will help me to keep different divisions of a news piece separate and will keeps the chance to define specific attributions for all of my news pieces.
+ 	 	I even defined the width for my NewsPiece borders hoping that it keeps the box created by my border just around the newspiece not all around the whole page, but it didn't work.  
+ 	 	-->
+ 		<div class="NewsPiece"> 
+ 			<div class="ArticleTitle">
+ 				<a href=http://www.unhcr.org/en-us/news/briefing/2017/1/5878a0464/unhcr-welcomes-ecuadors-new-human-mobility-law.html?query=colombia%20refugees>
+ 				UNHCR welcomes Ecuador’s new Human Mobility Law
+ 				</a> 
+ 			</div>
+ 			<div class="imgDiv"> 
+ 				<img src="http://www.unhcr.org/thumb1/58789fad4.jpg"/>
+ 			 	<!--All four images I have used so far were embeded in the news pieces I used.-->		
+ 			</div>
+ 			<div class="Summary">
+ 				Ecuador’s National Assembly passes a Human Mobility Law that regulates conditions of mobilized people, including Colombian refugees.
+				Based on the newly passed law, refugees will be granted a national identification card.  It also provides support to refugee children and stateless people.
+	            Colombians compensate over 95 percent of the total 60,000 refugees that this country hosts.
+				UNHCR welcomes the move and would like to strengthen its cooperation with Ecuador to assure improvement of refugees’ living condition and access to their human rights.
+ 			</div>
+ 		</div>
+ 	
+ 	<!-- To keep my pieces separate, I defined borders for each piece, but I don't know why my borders get thicker as I scroll down the page. It seems like boders are accumilating. I am wondering why. -->
+ 		<div class="NewsPiece"> 
+ 			<div class="ArticleTitle">
+ 				<a href=http://www.unhcr.org/en-us/news/latest/2016/4/570cf4706/unhcr-include-refugees-displaced-colombia-peace-talks.html>
+ 				UNHCR: Include refugees and displaced in Colombia peace talks
+ 				<!--All the news titles are identical as the news pieces I have used but summaries are a jist of what the whole piece was about in my words-->
+ 				</a>
+ 			</div> 
+ 			<div class="imgDiv"> 
+ 				<img src="http://www.unhcr.org/thumb1/570cc1a76.jpg"/>
+ 			</div>
+ 			<div class="Summary">
+ 				UNHCR calls for special attention to the refugees’ condition as peace talks are going on between the government of Colombian and ELN, the rebel National Liberation Army.
+				The almost half-century of civil war has left the country with a high number of internally displaced population. In terms of IDP statistics, Colombia ranks the second after Syria with 6.7 million people displaced people inside of the country.
+ 			</div>
+ 		</div>
+ 
+ 
+ 		<div class="NewsPiece">
+ 			<div class="ArticleTitle">
+ 				<a href=http://www.resettlement.eu/page/colombian-refugee-situation> 
+ 				The Colombian Refugee Situation
+ 				</a> 
+ 			</div>
+ 			<div class="imgDiv"> 
+ 				 <img src="http://www.resettlement.eu/sites/icmc.tttp.eu/files/03729.jpg"/>
+ 			</div>
+ 			<div class="Summary">
+ 					Due to 50 years of war between guerrillas, paramilitaries and the army of Colombia, over half a million people of the country have fled to the neighboring countries. This is besides millions of displaced people within the borders.
+					Out of this half million, only 70,000 refugees are registered with UNHCR.
+					Many of these people have fled to Ecuador, Costa Rica, Panama, and Venezuela. European countries that have resettled Colombian refugees are Denmark, Norway and Sweden.
+ 			</div>
+ 		</div>
+ 		
+ 		
+ 		<div class="NewsPiece"> 
+ 			<div class="ArticleTitle">
+ 				<a href=http://jrsusa.org/Spotlight_Detail_Continue?TN=DTN-20110321033950&PTN=DTN-20110321031249>
+ 				Colombian Refugees in Ecuador
+ 				</a> 
+ 			</div>
+ 			<div class="imgDiv"> 
+ 				<img src="https://www.jrsusa.org/assets/Pray/Snapshots/500Brothel040.jpg"/>
+ 			</div>
+ 			<div class="Summary"> 
+ 				Colombian refugees face different threats. Here are the main challenges they have to deal with if they ever manage to successfully flee their country to Ecuador.
+				a. Protection: Ecuadorian security cannot provide enough support to the Colombian people who have fled their countries. Sexual and gender-based violence is a constant risk. Some 80% of women population has reported experiencing gender-based violence.
+
+				b. Local integration: finding dignified housing, access to healthcare, education and access to infrastructures like healthy food and clean water remains to be unsolved.
+ 			</div>
+ 		</div>
+ 		
+ 		
+ 		<script>
+ 			/*This is data about my data research on Colombian refugees*/
+ 			var Research_Title = "Colombian IDPs and Refugees";
+ 			var My_Population = {"IDPs":"refugees"};
+ 			var Affected_Population = "7000000";
+ 			var Refugee_Destination = ["Ecuador","Peru","Brazil"];
+ 			var Second_IDP_Population = true;
+ 		</script>
+ 			
+ 	</body>
+ </html>
