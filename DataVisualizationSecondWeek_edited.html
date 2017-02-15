@@ -115,6 +115,7 @@
  		</div>
  		
  		
+ 		
  	<script>
  			/*This is data about my data research on Colombian refugees*/
  			var Research_Title = "Colombian IDPs and Refugees";
@@ -160,6 +161,80 @@
  			console.log(Solutions_History_and_Awards);
  			Main_Current_Locations_of_Displaced_Colombians[5]="Some European countries";
  			console.log(Main_Current_Locations_of_Displaced_Colombians);
+ 			
+ 			
+ 			
+	 
+	
+	var NewsPiece = [{
+	/* This var is a "list"" of objects; each of these objects is one of my articles. For now, I have four objects/articles. it may increase in the future. Each object/article which I named "NewsPiece", has six properties by now. */
+	
+	"ArtcleTitle":".ایران 40 هزار دانشجوی افغانستانی را پرورش داده است",
+	/*ArtcleTitle's value is the name of the headline. Here the value is */
+	
+	"Language":"Persian",
+	/*The article is from Farsnews, an Iranian official websites. It is from the Farsi version of this news agency.*/
+	
+	"url":"http://www.farsnews.com/newstext.php?nn=13951105001514",
+	/*Above is the url link to the article in Farsnews.*/
+	
+	"Date":"2017"
+	/*The publication date of this article in Farsnews in Christian calendar is January 24th 2017*/
+	
+	
+	"image":"http://media.farsnews.com/media/Uploaded/Files/Images/1395/08/07/13950807000248_PhotoA.jpg",
+	/*Above is the link to the picture associated with the article in Farsnews*/
+	
+	
+	"summary":"حجت‌الاسلام والمسلمین محمد صالحی: همچنین در حال حاضر بیش از 410 هزار دانش‌آموز افغانستانی در مدارس ایران تحصیل می‌کنند و این امر موجب شده که کودکان و نوجوانان پناهجو از تحصیل محروم نباشند"
+	/*QUESTION: I added a longer summry but it made all my codings to have the yellow underlining which normally shows problems. I could not get rid of the yellow lines unless I shorteed my summary. I am wondering if the problem is with the Persian language in my summary text. It is pretty much the safest length I could include.*/
+	
+	},
+	
+	
+	];
+	
+	
+	/* Goal: go through my list of articles and console log only the ones that came from New York Times.
+	
+	*
+	
+	* 
+	
+	* 
+	
+	* /
+	
+	/* To go through the list, creat a for loop!*/
+	
+	
+	for (var counter = 0; counter < my_articles.length; counter++){
+	
+	/* everything that I want tot do to each item, must be between these brackets */
+	
+	
+	var currentArticle(my_articles[counter]);
+	
+	
+	if (currentArticle.source == "nytimes") {
+	
+	
+	console.log(currentArticle);
+	
+	
+	}
+	
+	else {
+	
+	
+	console.log("Not NYtimes")
+	
+	}
+	
+	
+	}
+
+
  		</script>
  			
  	</body>
