@@ -166,8 +166,8 @@
  			
 	 
 	
-	var NewsPiece = [{
-	/* This var is a "list"" of objects; each of these objects is one of my articles. For now, I have four objects/articles. it may increase in the future. Each object/article which I named "NewsPiece", has six properties by now. */
+	var NewsPieces = [{
+	/* This var is a "list"" of objects; each of these objects is one of my articles, I names them . For now, I have four objects/articles. it may increase in the future. Each object/article which I named "NewsPiece", has six properties by now. */
 	
 	"ArtcleTitle":".ایران 40 هزار دانشجوی افغانستانی را پرورش داده است",
 	/*ArtcleTitle's value is the name of the headline. Here the value is */
@@ -178,7 +178,7 @@
 	"url":"http://www.farsnews.com/newstext.php?nn=13951105001514",
 	/*Above is the url link to the article in Farsnews.*/
 	
-	"Date":"2017"
+	"Date":"2017",
 	/*The publication date of this article in Farsnews in Christian calendar is January 24th 2017*/
 	
 	
@@ -191,6 +191,49 @@
 	
 	},
 	
+	{
+	"ArtcleTitle":" نماینده کمیساریای عالی پناهندگان سازمان ملل در ایران دنیا نمی‌خواهد خدمات ایران به پناه‌جویان خارجی را ببیند",
+	/*ArtcleTitle's value is the name of the headline. Here the value is a quote from */
+	
+	"Language":"Persian",
+	/*The article is from Farsnews, an Iranian official websites. It is from the Farsi version of this news agency.*/
+	
+	"url":"http://www.farsnews.com/newstext.php?nn=13951109001910",
+	/*Above is the url link to the article in Farsnews.*/
+	
+	"Date":"2017",
+	/*The publication date of this article in Farsnews in Christian calendar is January 28th 2017*/
+	
+	"image":"http://media.farsnews.com/media/Uploaded/Files/Images/1395/11/09/13951109001636_PhotoA.jpg",
+	/*Above is the link to the picture associated with the article in Farsnews*/
+	
+	
+	"summary":"سی‌وان دانا پالا یادآور شد: از جمله شاخص‌ترین برنامه‌هایی که سبب تحسین مقامات کمیساریای عالی پناهندگان سازمان ملل در مورد ایران شده ارائه خدمات آموزشی، سلامت و بهداشت به پناهجویان فاقد مدارک هویتی و شناسایی درست است که خیلی محدود در دیگر کشورها به مانند ایران انجام می‌شود."
+	/*The summary quotes UNHCR's representative in Iran as Fars sayng that the high level of services that Iran provides refugees with in the field of healthcare can rarely be found in other countries.*/
+		},
+	
+	{
+	"ArtcleTitle":"European Union reaches out to Iran over Afghan refugees",
+	/*ArtcleTitle's value is the name of the headline. Here the value is a quote from */
+	
+	"Language":"English",
+	/*The article is from Rueters in English.*/
+	
+	"url":"http://www.reuters.com/article/us-europe-migrants-iran-idUSKCN12Q27T",
+	/*Above is the url link to the article in Reuters.*/
+	
+	"Date":"2016",
+	/*The publication date of this article is Oct 26, 2016*/
+	
+	"image":"http://s3.reutersmedia.net/resources/r/?m=02&d=20161026&t=2&i=1159070668&w=&fh=&fw=&ll=780&pl=468&sq=&r=LYNXNPEC9P1C6",
+	/*Above is the link to the picture associated with the article in Rueters*/
+	
+	
+	"summary":"European countries found it a better solution to help Iran with financial aids to provide Afghan refugees with better offers in healthcare and education, so they stay in Iran rather than taking the rout to Europ."
+	/*This is probably the most important part of the story*/
+		},
+		
+		
 	
 	];
 	
@@ -213,7 +256,7 @@
 	/* everything that I want tot do to each item, must be between these brackets */
 	
 	
-	var currentArticle(my_articles[counter]);
+	var currentArticle(NewsPieces[counter]),
 	
 	
 	if (currentArticle.source == "nytimes") {
