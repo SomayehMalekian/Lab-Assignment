@@ -1,284 +1,76 @@
- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
- "http://www.w3.org/TR/html4/loose.dtd">
- 	<head>
- 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
- 		<!--Following are the styles I thought might be useful in quickly organizing my website-->
- 		<style>
- 		/*Classes that I defined are NewsPiece which will be applied for as many new pieces that I'll add to 
- 		 the website. Each NewsPiece may include but not restricted the followings: ArticleTitle (for now includes
- 		 a link to an outside website), Summary and a relevant image*/
- 			.ArticleTitle{
- 				font-style:bold;
- 				font-size:20px;
- 				color: #0000FF;
- 				font-family: "Georgia"
- 			}
- 			
- 			.NewsPiece{
- 				border: solid;
- 				border-width: 2px;
- 				width: 100%;
- 				color: #800000
- 			}
- 			
- 			.Summary{
- 				font-size:15px;
- 				color: #000000;
- 				font-style: "Times New Roman"
- 				
- 			}
- 			.imgDiv{
- 				border: solid;
- 				border-width: 1px;  
- 				color: #000000;
- 				width: 600px
- 			}
- 			
- 			img{
- 				width: 100%
- 			}
- 		</style>
- 		<title>Somayeh's Refugee Story Collection</title>
- 	</head>
- 	<body>
- 	 <!-- To separate my news pieces, I defined a class "NewsPiece". It will help me to keep different divisions of a news piece separate and will keeps the chance to define specific attributions for all of my news pieces.
- 	 	I even defined the width for my NewsPiece borders hoping that it keeps the box created by my border just around the newspiece not all around the whole page, but it didn't work.  
- 	 	-->
- 		<div class="NewsPiece"> 
- 			<div class="ArticleTitle">
- 				<a href=http://www.unhcr.org/en-us/news/briefing/2017/1/5878a0464/unhcr-welcomes-ecuadors-new-human-mobility-law.html?query=colombia%20refugees>
- 				UNHCR welcomes Ecuador’s new Human Mobility Law
- 				</a> 
- 			</div>
- 			<div class="imgDiv"> 
- 				<img src="http://www.unhcr.org/thumb1/58789fad4.jpg"/>
- 			 	<!--All four images I have used so far were embeded in the news pieces I used.-->		
- 			</div>
- 			<div class="Summary">
- 				Ecuador’s National Assembly passes a Human Mobility Law that regulates conditions of mobilized people, including Colombian refugees.
-				Based on the newly passed law, refugees will be granted a national identification card.  It also provides support to refugee children and stateless people.
-	            Colombians compensate over 95 percent of the total 60,000 refugees that this country hosts.
-				UNHCR welcomes the move and would like to strengthen its cooperation with Ecuador to assure improvement of refugees’ living condition and access to their human rights.
- 			</div>
- 		</div>
- 	
- 	<!-- To keep my pieces separate, I defined borders for each piece, but I don't know why my borders get thicker as I scroll down the page. It seems like boders are accumilating. I am wondering why. -->
- 		<div class="NewsPiece"> 
- 			<div class="ArticleTitle">
- 				<a href=http://www.unhcr.org/en-us/news/latest/2016/4/570cf4706/unhcr-include-refugees-displaced-colombia-peace-talks.html>
- 				UNHCR: Include refugees and displaced in Colombia peace talks
- 				<!--All the news titles are identical as the news pieces I have used but summaries are a jist of what the whole piece was about in my words-->
- 				</a>
- 			</div> 
- 			<div class="imgDiv"> 
- 				<img src="http://www.unhcr.org/thumb1/570cc1a76.jpg"/>
- 			</div>
- 			<div class="Summary">
- 				UNHCR calls for special attention to the refugees’ condition as peace talks are going on between the government of Colombian and ELN, the rebel National Liberation Army.
-				The almost half-century of civil war has left the country with a high number of internally displaced population. In terms of IDP statistics, Colombia ranks the second after Syria with 6.7 million people displaced people inside of the country.
- 			</div>
- 		</div>
- 
- 
- 		<div class="NewsPiece">
- 			<div class="ArticleTitle">
- 				<a href=http://www.resettlement.eu/page/colombian-refugee-situation> 
- 				The Colombian Refugee Situation
- 				</a> 
- 			</div>
- 			<div class="imgDiv"> 
- 				 <img src="http://www.resettlement.eu/sites/icmc.tttp.eu/files/03729.jpg"/>
- 			</div>
- 			<div class="Summary">
- 					Due to 50 years of war between guerrillas, paramilitaries and the army of Colombia, over half a million people of the country have fled to the neighboring countries. This is besides millions of displaced people within the borders.
-					Out of this half million, only 70,000 refugees are registered with UNHCR.
-					Many of these people have fled to Ecuador, Costa Rica, Panama, and Venezuela. European countries that have resettled Colombian refugees are Denmark, Norway and Sweden.
- 			</div>
- 		</div>
- 		
- 		
- 		<div class="NewsPiece"> 
- 			<div class="ArticleTitle">
- 				<a href=http://jrsusa.org/Spotlight_Detail_Continue?TN=DTN-20110321033950&PTN=DTN-20110321031249>
- 				Colombian Refugees in Ecuador
- 				</a> 
- 			</div>
- 			<div class="imgDiv"> 
- 				<img src="https://www.jrsusa.org/assets/Pray/Snapshots/500Brothel040.jpg"/>
- 			</div>
- 			<div class="Summary"> 
- 				Colombian refugees face different threats. Here are the main challenges they have to deal with if they ever manage to successfully flee their country to Ecuador.
-				a. Protection: Ecuadorian security cannot provide enough support to the Colombian people who have fled their countries. Sexual and gender-based violence is a constant risk. Some 80% of women population has reported experiencing gender-based violence.
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<!--Following is the address to call my style coding from where I had saved it separately from my HTML coding-->
+	<link rel="stylesheet" href="styles.css"/>
+	<title>Somayeh's Refugee Story Collection</title>
+</head>
+<body>
+	<!-- To separate my news pieces, I defined a class "NewsPiece". It will help me to keep different divisions of a news piece separate and will keeps the chance to define specific attributions for all of my news pieces.
+	I even defined the width for my NewsPiece borders hoping that it keeps the box created by my border just around the newspiece not all around the whole page, but it didn't work.
+	-->
+	<div class="NewsPiece">
+		<div class="ArticleTitle">
+			<a href=http://www.unhcr.org/en-us/news/briefing/2017/1/5878a0464/unhcr-welcomes-ecuadors-new-human-mobility-law.html?query=colombia%20refugees> UNHCR welcomes Ecuador’s new Human Mobility Law </a>
+		</div>
+		<div class="imgDiv">
+			<img src="http://www.unhcr.org/thumb1/58789fad4.jpg"/>
+			<!--All four images I have used so far were embeded in the news pieces I used.-->
+		</div>
+		<div class="Summary">
+			Ecuador’s National Assembly passes a Human Mobility Law that regulates conditions of mobilized people, including Colombian refugees.
+			Based on the newly passed law, refugees will be granted a national identification card.  It also provides support to refugee children and stateless people.
+			Colombians compensate over 95 percent of the total 60,000 refugees that this country hosts.
+			UNHCR welcomes the move and would like to strengthen its cooperation with Ecuador to assure improvement of refugees’ living condition and access to their human rights.
+		</div>
+	</div>
 
-				b. Local integration: finding dignified housing, access to healthcare, education and access to infrastructures like healthy food and clean water remains to be unsolved.
- 			</div>
- 		</div>
- 		
- 		
- 		
- 	<script>
- 			/*This is data about my data research on Colombian refugees*/
- 			var Research_Title = "Colombian IDPs and Refugees";
- 			/*Above var defines the title of my research*/
- 			
- 			var Main_Current_Locations_of_Displaced_Colombians = ["IDPs Inside Colombia","Refugees in Ecuador","Refugees in Venezuela","Refugees in Canada","Refugees in Peru"];
- 			/*Above var defines destinations of the population who are displaced due to Colombian crisis*/
- 			
- 			var Total_Population = "7288004";
- 			/*Above var is the official figue of displaced Colombians till the end of 2015 based on UNHCR's statistics'*/
- 			
- 			var Solutions_History_and_Awards = {
- 			"History":"Peace talks started in 2011",
- 			
- 			"Domestic_Solution":["Peace talks between Colombian government and FARC","Peace talks with ELN"],
- 			"FARC":"Revolutionary Armed Forces of Colombia",
- 			"ELN":"National Liberation Army",
- 			"Colombia President":{"name":"Juan Manuel Santos","achievement":"Peace deal with FARC","awards":"Nobel Peace Prize"},
- 			
- 			"International_Solution":["UNHCR helped to relocate several hundred refugees in 2010",
- 			"ASOPMICEO launched a micro-loan program which benefits both host communities and refugees"],
- 			"ASOPMICEO":"A refugee organization in Lago Agrio",	
- 			};
- 			/*Above is a var showing domestic and foreign efforts to solve displaced Colombia's population's problem*/
- 			
- 			var Second_Global_IDP_Population = true;
- 			/*Above is the var to define Columbia's global ranking in terms of IDP population*/
- 			
- 			var News_Pieces = [{
- 				"title":"",
- 				"utl":"",
- 				"image":"",
- 				"summary":"",
- 			},
- 			{
- 				"title":"",
- 				"utl":"",
- 				"image":"",
- 				"summary":"",
- 			},
- 			];	
- 			console.log(Main_Current_Locations_of_Displaced_Colombians);
- 			console.log(Solutions_History_and_Awards);
- 			Main_Current_Locations_of_Displaced_Colombians[5]="Some European countries";
- 			console.log(Main_Current_Locations_of_Displaced_Colombians);
- 			
- 
-	var NewsPieces = [{
-	/* This var is a "list"" of objects; each of these objects is one of my articles, I names them . For now, I have four objects/articles. it may increase in the future. Each object/article which I named "NewsPiece", has six properties by now. */
-	
-	"ArtcleTitle":"ایران چهل هزار دانشجوی افغانستانی را پرورش داده است",
-	/*ArtcleTitle's value is the name of the headline. Here the value is */
-	
-	"Language":"Persian",
-	/*The article is from Farsnews, an Iranian official websites. It is from the Farsi version of this news agency.*/
-	
-	"url":"http://www.farsnews.com/newstext.php?nn=13951105001514",
-	/*Above is the url link to the article in Farsnews.*/
-	
-	"Date":"2017",
-	/*The publication date of this article in Farsnews in Christian calendar is January 24th 2017*/
-		
-	"image":"http://media.farsnews.com/media/Uploaded/Files/Images/1395/08/07/13950807000248_PhotoA.jpg",
-	/*Above is the link to the picture associated with the article in Farsnews*/
-	
-	
-	"summary":"فارس: حجت‌الاسلام والمسلمین محمد صالحی: همچنین در حال حاضر بیش از 410 هزار دانش‌آموز افغانستانی در مدارس ایران تحصیل می‌کنند و این امر موجب شده که کودکان و نوجوانان پناهجو از تحصیل محروم نباش"
-	/*Unfortunately I did not access Farsi keyboard and copies and pasted the most part of the article in my summary section instead of paraphrasing. But I tried to put it in a way that shows it is taken from Fars*/
-				},
-	
-	
-	{
-	"ArtcleTitle":" نماینده کمیساریای عالی پناهندگان سازمان ملل در ایران دنیا نمی‌خواهد خدمات ایران به پناه‌جویان خارجی را ببیند",
-	/*ArtcleTitle's value is the name of the headline. Here the value is a quote from */
-	
-	"Language":"Persian",
-	/*The article is from Farsnews, an Iranian official websites. It is from the Farsi version of this news agency.*/
-	
-	"url":"http://www.farsnews.com/newstext.php?nn=13951109001910",
-	/*Above is the url link to the article in Farsnews.*/
-	
-	"Date":"2017",
-	/*The publication date of this article in Farsnews in Christian calendar is January 28th 2017*/
-	
-	"image":"http://media.farsnews.com/media/Uploaded/Files/Images/1395/11/09/13951109001636_PhotoA.jpg",
-	/*Above is the link to the picture associated with the article in Farsnews*/
-		
-	"summary":"فارس: سی‌وان دانا پالا یادآور شد: از جمله شاخص‌ترین برنامه‌هایی که سبب تحسین مقامات کمیساریای عالی پناهندگان سازمان ملل در مورد ایران شده ارائه خدمات آموزشی، سلامت و بهداشت به پناهجویان فاقد مدارک هویتی و شناسایی درست است که خیلی محدود در دیگر کشورها به مانند ایران انجام می‌شود"
-	/*The summary quotes UNHCR's representative in Iran as Fars sayng that the high level of services that Iran provides refugees with in the field of healthcare can rarely be found in other countries.*/
-	},
-	
-	
-	{
-	"ArtcleTitle":"European Union reaches out to Iran over Afghan refugees",
-	/*ArtcleTitle's value is the name of the headline. Here the value is a quote from */
-	
-	"Language":"English",
-	/*The article is from Rueters in English.*/
-	
-	"url":"http://www.reuters.com/article/us-europe-migrants-iran-idUSKCN12Q27T",
-	/*Above is the url link to the article in Reuters.*/
-	
-	"Date":"2016",
-	/*The publication date of this article is Oct 26, 2016*/
-	
-	"image":"http://s3.reutersmedia.net/resources/r/?m=02&d=20161026&t=2&i=1159070668&w=&fh=&fw=&ll=780&pl=468&sq=&r=LYNXNPEC9P1C6",
-	/*Above is the link to the picture associated with the article in Rueters*/
-	
-		"summary":"European countries found it a better solution to help Iran with financial aids to provide Afghan refugees with better offers in healthcare and education, so they stay in Iran rather than taking the rout to Europ."
-	/*This is probably the most important part of the story*/
-	},
-		
-		
-	{
-	"ArtcleTitle":"Anywhere but home: an Afghan labourer in Iran dreams of life in Sweden",
-	/*ArtcleTitle's value is the name of the headline. Here the value is a quote from */
-	
-	"Language":"English",
-	/*The article is from Guardian in English.*/
-	
-	"url":"https://www.theguardian.com/world/iran-blog/2016/feb/03/afghan-refugees-iran-greece-sweden",
-	/*Above is the url link to the article in Farsnews.*/
-	
-	"Date":"2016",
-	/*The publication date of this article is Fabruary 3 2016*/
-	
-	"image":"https://i.guim.co.uk/img/media/c9ce9438b305eaef790649938e73af2203b7cf08/0_0_3022_3022/master/3022.jpg?w=620&q=55&auto=format&usm=12&fit=max&s=f15e0cda7bf8bce2283d4ce8e7ff817f",
-	/*Above is the link to the picture associated with the article in Guardian*/
+	<!-- To keep my pieces separate, I defined borders for each piece, but I don't know why my borders get thicker as I scroll down the page. It seems like boders are accumilating. I am wondering why. -->
+	<div class="NewsPiece">
+		<div class="ArticleTitle">
+			<a href=http://www.unhcr.org/en-us/news/latest/2016/4/570cf4706/unhcr-include-refugees-displaced-colombia-peace-talks.html> UNHCR: Include refugees and displaced in Colombia peace talks <!--All the news titles are identical as the news pieces I have used but summaries are a jist of what the whole piece was about in my words--> </a>
+		</div>
+		<div class="imgDiv">
+			<img src="http://www.unhcr.org/thumb1/570cc1a76.jpg"/>
+		</div>
+		<div class="Summary">
+			UNHCR calls for special attention to the refugees’ condition as peace talks are going on between the government of Colombian and ELN, the rebel National Liberation Army.
+			The almost half-century of civil war has left the country with a high number of internally displaced population. In terms of IDP statistics, Colombia ranks the second after Syria with 6.7 million people displaced people inside of the country.
+		</div>
+	</div>
 
-	"summary":"Despite of European countries financial aid to Iran to improve Afghan refugees' living conditions, the will to have a better life keeps Afghans leaving Iran to Europe. The financial aid that Europe has send to Iran is not considerable comparing to its help to Turkey."
-	/*This is a very short version of the article.*/
-	},
-	
-	];
-	
-	
-	
-	/* Goal: This is to go through my list of NewsPieces and console log only the ones that are in Persian. So, to go through the list, I created a for loop*/
-	
-	for (var counter = 0; counter < NewsPieces.length; counter++){
-	
-		 /* The loop will check each single objects and if the roperty of language is Persian, it keeps counting them adding up from 0. It will always keep the total number of Persian NewsPieces less than the total number of all of my articles.*/
-	
-	
-	var MyArticleLanguage = (NewsPieces[counter]);
-	/*This variable helps me to define the language of my news pieces to the computer.*/
-	
-	
-	if (MyArticleLanguage.Language == "Persian") {
-		/*Through this condition I command that if the language which I have defined for my piece as a property is Persian, it has to be counted in the console.log and added up to my Persian Language news piecesthat I have defined through the above var. (I hope I have understand it properly.) */
-	
-	
-	console.log(MyArticleLanguage);
-	/*This line would help the machine to send the report to the console, so I can see the number of the articles in Persian language.*/
-	}
-	
-	else {console.log("English")}
-	/*This else command helps in labeling any var which does not match the Persian language defined in if command to get the lable of English, which is the only other language of the articles published in this website.*/
-	
-	}
+	<div class="NewsPiece">
+		<div class="ArticleTitle">
+			<a href=http://www.resettlement.eu/page/colombian-refugee-situation> The Colombian Refugee Situation </a>
+		</div>
+		<div class="imgDiv">
+			<img src="http://www.resettlement.eu/sites/icmc.tttp.eu/files/03729.jpg"/>
+		</div>
+		<div class="Summary">
+			Due to 50 years of war between guerrillas, paramilitaries and the army of Colombia, over half a million people of the country have fled to the neighboring countries. This is besides millions of displaced people within the borders.
+			Out of this half million, only 70,000 refugees are registered with UNHCR.
+			Many of these people have fled to Ecuador, Costa Rica, Panama, and Venezuela. European countries that have resettled Colombian refugees are Denmark, Norway and Sweden.
+		</div>
+	</div>
 
+	<div class="NewsPiece">
+		<div class="ArticleTitle">
+			<a href=http://jrsusa.org/Spotlight_Detail_Continue?TN=DTN-20110321033950&PTN=DTN-20110321031249> Colombian Refugees in Ecuador </a>
+		</div>
+		<div class="imgDiv">
+			<img src="https://www.jrsusa.org/assets/Pray/Snapshots/500Brothel040.jpg"/>
+		</div>
+		<div class="Summary">
+			Colombian refugees face different threats. Here are the main challenges they have to deal with if they ever manage to successfully flee their country to Ecuador.
+			a. Protection: Ecuadorian security cannot provide enough support to the Colombian people who have fled their countries. Sexual and gender-based violence is a constant risk. Some 80% of women population has reported experiencing gender-based violence.
 
- 		</script>
- 			
- 	</body>
- </html>
+			b. Local integration: finding dignified housing, access to healthcare, education and access to infrastructures like healthy food and clean water remains to be unsolved.
+		</div>
+	</div>
+<!--Following is the line to call my Javascript coding which I have saved from another file-->
+	<script type="text/javascript" src="scripts.js" ></script>
+
+</body>
+</html>
