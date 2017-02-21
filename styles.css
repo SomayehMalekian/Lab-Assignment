@@ -1,0 +1,33 @@
+/*Classes that I defined are NewsPiece which will be applied for as many new pieces that I'll add to
+ the website. Each NewsPiece may include but not restricted the followings: ArticleTitle (for now includes
+ a link to an outside website), Summary and a relevant image*/
+.ArticleTitle {
+	font-style: bold;
+	font-size: 20px;
+	color: #0000FF;
+	font-family: "Georgia"
+}
+
+.NewsPiece {
+	border: solid;
+	border-width: 2px;
+	width: 100%;
+	color: #800000
+}
+
+.Summary {
+	font-size: 15px;
+	color: #000000;
+	font-style: "Times New Roman"
+}
+.imgDiv {
+	border: solid;
+	border-width: 1px;
+	color: #000000;
+	width: 600px
+}
+
+img {
+	width: 100%
+} 
+#chart_holder {}
