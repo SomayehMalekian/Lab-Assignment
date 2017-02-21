@@ -5,9 +5,60 @@
 	
 	<!--Following is the address to call my style coding from where I had saved it separately from my HTML coding-->
 	<link rel="stylesheet" href="styles.css"/>
+	<!--Refrences for including a CSS stylesheet 
+	https://developers.google.com/chart/interactive/docs/quick_start-->
+	<!--Load Javascript code from the Google Visualization library-->
 	<title>Somayeh's Refugee Story Collection</title>
+	<!--Following is the link to call my Javascript coding which I have saved from another file-->
+ 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script>
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      
+	function drawChart() {
+		//Call on the DataTable recipe to make a new DataTable type
+		var data_container = new google.visualization.DataTable();
+		/*Add a column of type string, labled "Topping"*/
+		data_container.addColumn('string','Topping');
+		/*Add a column of type string, labled "Slices"*/
+		data_container.addColumn('number','Slices');
+		/* My rows must be a list of lists, with each item in the list
+		 * having the same number of elements as I have columns
+		 * AND with the data types matching those that were declared 
+		 * in my "addColumn" function calls.*/
+		
+		 data_container.addRows([['Mushrooms', 3],['Onions', 1],['Olives', 1],['Zucchini', 1],['Pepperoni', 2]
+        ]);
+        /*
+         * 
+         * 
+         * */
+        
+        
+         var customization_options = {'title':'How Much Pizza I Ate Last Night',
+          'width':400,
+          'height':300};
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_holder'));
+        chart.draw(data_container, customization_options);
+        
+	}
+	</script>
+	
 </head>
 <body>
+	
+	<!--This is a dive where I want my chart appear -->
+	<div id="chart_holder"> </div>
 	<!-- To separate my news pieces, I defined a class "NewsPiece". It will help me to keep different divisions of a news piece separate and will keeps the chance to define specific attributions for all of my news pieces.
 	I even defined the width for my NewsPiece borders hoping that it keeps the box created by my border just around the newspiece not all around the whole page, but it didn't work.
 	-->
@@ -69,8 +120,9 @@
 			b. Local integration: finding dignified housing, access to healthcare, education and access to infrastructures like healthy food and clean water remains to be unsolved.
 		</div>
 	</div>
-<!--Following is the line to call my Javascript coding which I have saved from another file-->
-	<script type="text/javascript" src="scripts.js" ></script>
+
+
+
 
 </body>
 </html>
