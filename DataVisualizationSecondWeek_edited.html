@@ -40,19 +40,19 @@
 		 * AND with the data types matching those that were declared 
 		 * in my "addColumn" function calls.*/
 		
-		 stat_sack.addRows([['2010', 31000000],['2011', 33000000],['2012', 29000000],
+		 stat_sack.addRows([['2010', 31000000],['2011', 34000000],['2012', 29000000],['2013', 30000000], ['2014', 29000000],['2015', 32000000]
         ]);
         
-        /*The following variable will be an object that can include any property we want our visulization have like a title, width and highth, 
-         * 
-         * 
-         * */
+        /*The following variable will be an object that can include any property we want our visulization have including
+         * a title, width and highth, background color, etc.*/
         
          var customization_options = {'title':'Budget that UNHCR allocated in total to displaced Colombians, IDPs and refugees, from 2010 to 2012 ',
           'width':600,
-          'height':500};
+          'height':600,
+          'backgroundColor': '#eeeeee'
+          };
         // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_holder'));
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_frame'));
         chart.draw(stat_sack, customization_options);
         
 	}
@@ -62,7 +62,7 @@
 <body>
 	
 	<!--This is a dive where I want my chart appear -->
-	<div id="chart_holder"> </div>
+	<div id="chart_frame"> </div>
 	<!-- To separate my news pieces, I defined a class "NewsPiece". It will help me to keep different divisions of a news piece separate and will keeps the chance to define specific attributions for all of my news pieces.
 	I even defined the width for my NewsPiece borders hoping that it keeps the box created by my border just around the newspiece not all around the whole page, but it didn't work.
 	-->
