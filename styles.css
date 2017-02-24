@@ -35,3 +35,5 @@ width: 600px;
 height: 600px;
 background-color: #eeeeee;
 }
+/*The above tag is what i use to define the space that I want the machine allocates to my chart before it is loaded
+ * to prevent jumping the screen upon loading the information. It technically preserves the space I need for my data visualization*/
