@@ -29,5 +29,9 @@
 
 img {
 	width: 100%
-} 
-#chart_holder {}
+}
+#chart_frame {
+width: 600px;
+height: 600px;
+background-color: #eeeeee;
+}
