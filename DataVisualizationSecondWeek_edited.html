@@ -2,67 +2,82 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	
-	<!--Following is the address to call my style coding from where I had saved it separately from my HTML coding-->
+
+	<!--Following is the address to load my style coding from where I had saved it separately from my HTML coding.
+	It's enough to add the links to my HTML and access them from here-->
 	<link rel="stylesheet" href="styles.css"/>
-	<!--Refrences for including a CSS stylesheet 
+	<!--Refrences for including a CSS stylesheet. Following is the reference from which I goy the command to access my CSS sheet.
 	https://developers.google.com/chart/interactive/docs/quick_start-->
 	<!--Load Javascript code from the Google Visualization library-->
 	<title>Somayeh's Refugee Story Collection</title>
-	<!--Following is the link to call my Javascript coding which I have saved from another file-->
- 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-<script>
-      // Folloing is the command to tell HTML to load the Visualization API and the corechart package we got from google library.
-      google.charts.load('current', {'packages':['corechart']});
-      /*As it might some time from the machine to get connected to the libary and bring us data, 
-       * we need to set a callback to run when the Google Visualization API is loaded*/
-      
-      google.charts.setOnLoadCallback(drawChart);
-      /* Above is the line of command which sets the callback which makes a data table,
-       *  illustrates the bar chart, puts the data in it and
-       * draws it*/
-      
-	function drawChart() {
-		/*This is the function through which we costumize our own set of 
-		 *data, which here in this case is the amount of money 
-		 * that UNHCR allocated to Colombian IDPs and refugees from 2010 to 2012. 
+	<!--Following is the link to call my Javascript coding which I have saved from another file-->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<script>
+		// Folloing is the command to tell HTML to load the Visualization API and the corechart package we got from google library.
+		google.charts.load('current', {
+			'packages' : ['corechart']
+		});
+		/*As it might some time from the machine to get connected to the libary and bring us data,
+		 * we need to set a callback to run when the Google Visualization API is loaded*/
+
+		/* Following is the line of command which sets the callback which makes a data table,
+		 *  illustrates the bar chart, puts the data in it and
+		 * draws it*/
+		google.charts.setOnLoadCallback(drawChart);
+
+		/*Following is the function through which we costumize our own set of
+		 *data, which here in this case is the amount of money
+		 * that UNHCR allocated to Colombian IDPs and refugees from 2010 to 2015.
 		 * We'll illustration this data set in the form of a bar chart by using the DataTable recipe*/
-		var stat_sack = new google.visualization.DataTable();
-		/*Add a column of type string, labled ""*/
-		stat_sack.addColumn('string','Year');
-		/*Add a column of type string, labled "Year". The stat here will be represented as a bar in my chart,
-		 * showing each year from 2010 to 2012*/
-		stat_sack.addColumn('number','Total Budget');
-		/* My rows must be a list of lists, with each item in the list
-		 * having the same number of elements as I have columns
-		 * AND with the data types matching those that were declared 
-		 * in my "addColumn" function calls.*/
-		
-		 stat_sack.addRows([['2010', 31000000],['2011', 34000000],['2012', 29000000],['2013', 30000000], ['2014', 29000000],['2015', 32000000]
-        ]);
-        
-        /*The following variable will be an object that can include any property we want our visulization have including
-         * a title, width and highth, background color, etc.*/
-        
-         var customization_options = {'title':'Budget that UNHCR allocated in total to displaced Colombians, IDPs and refugees, from 2010 to 2012 ',
-          'width':600,
-          'height':600,
-          'backgroundColor': '#eeeeee'
-          };
-        // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_frame'));
-        chart.draw(stat_sack, customization_options);
-        
-	}
+		function drawChart() {
+			var stat_sack = new google.visualization.DataTable();
+
+			/*With the following command, I add a column of type string, labled "Year" to show related which year each bar represents*/
+			stat_sack.addColumn('string', 'Year');
+
+			/*Through the following command, I add a column of type string, labled "Tortal Budget". The stat here will show the value on y axis in my chart,
+			 * showing the budget allocated to displaced Colombians in the related year.*/
+			stat_sack.addColumn('number', 'Total Budget');
+
+			/* My rows must be a list of lists, with each item in the list
+			 * having the same number of elements as I have columns
+			 * AND with the data types matching those that were declared
+			 * in my "addColumn" function calls.*/
+			stat_sack.addRows([['2010', 31000000], ['2011', 34000000], ['2012', 29000000], ['2013', 30000000], ['2014', 29000000], ['2015', 32000000]]);
+
+
+			/*The following variable will be an object that can include any property we want our visulization have including
+			 * a title, width and highth, background color, etc.*/
+			var my_chart_options = {
+				'title' :'Budget that UNHCR allocated in total to displaced Colombians, IDPs and refugees, from 2010 to 2015 Comment: The budget from July till the end of December',
+				'width' : 600,
+				'height' : 600,
+				'backgroundColor' : '#eeeeee'
+			}
+			
+			/*QUESTION: I don't know how to add comment within my bar chart. If you remember, the stat for 2013 was as of July of the related year.
+			 * I need to explain it within the chart as you had commented in my redesign assignment but I didn't know how,
+			 * so I just continued my title for now and wrote a comment within the title which I am sure is not the way to do it.*/
+			
+			
+			// Instantiate and draw our chart, passing in some options.
+			var UNHCR_budget_allocation_colombia = new google.visualization.ColumnChart(document.getElementById('chart_frame'));
+			UNHCR_budget_allocation_colombia.draw(stat_sack, my_chart_options);
+
+		}
 	</script>
-	
+
 </head>
 <body>
+
+	<!--This is a div where I want my chart appear and I want reserve the place on the website even before the information is loaded
+		This is to prevent my website from jumping, especially in mobile-app use -->
+	<div id="chart_frame"></div>
 	
-	<!--This is a dive where I want my chart appear -->
-	<div id="chart_frame"> </div>
+	
+	
 	<!-- To separate my news pieces, I defined a class "NewsPiece". It will help me to keep different divisions of a news piece separate and will keeps the chance to define specific attributions for all of my news pieces.
 	I even defined the width for my NewsPiece borders hoping that it keeps the box created by my border just around the newspiece not all around the whole page, but it didn't work.
 	-->
@@ -124,9 +139,6 @@
 			b. Local integration: finding dignified housing, access to healthcare, education and access to infrastructures like healthy food and clean water remains to be unsolved.
 		</div>
 	</div>
-
-
-
 
 </body>
 </html>
