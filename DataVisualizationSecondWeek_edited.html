@@ -14,18 +14,19 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script>
-      // Load the Visualization API and the corechart package.
+      // Folloing is the command to tell HTML to load the Visualization API and the corechart package we got from google library.
       google.charts.load('current', {'packages':['corechart']});
-
-      // Set a callback to run when the Google Visualization API is loaded.
+      /*As it might some time from the machine to get connected to the libary and bring us data, 
+       * we need to set a callback to run when the Google Visualization API is loaded*/
+      
       google.charts.setOnLoadCallback(drawChart);
-
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
+      /* Above is the line of command which sets the callback which makes a data table,
+       *  illustrates the bar chart, puts the data in it and
+       * draws it*/
       
 	function drawChart() {
-		//Call on the DataTable recipe to make a new DataTable type
+		/*This is the function through which we costumize our own set of data by 
+		 * using the DataTable recipe*/
 		var data_container = new google.visualization.DataTable();
 		/*Add a column of type string, labled "Topping"*/
 		data_container.addColumn('string','Topping');
@@ -44,7 +45,7 @@
          * */
         
         
-         var customization_options = {'title':'How Much Pizza I Ate Last Night',
+         var customization_options = {'title':'How much money has been allocated for Colombian IDPs and refugees in the past ',
           'width':400,
           'height':300};
         // Instantiate and draw our chart, passing in some options.
