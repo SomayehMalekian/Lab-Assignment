@@ -25,32 +25,35 @@
        * draws it*/
       
 	function drawChart() {
-		/*This is the function through which we costumize our own set of data by 
-		 * using the DataTable recipe*/
-		var data_container = new google.visualization.DataTable();
-		/*Add a column of type string, labled "Topping"*/
-		data_container.addColumn('string','Topping');
-		/*Add a column of type string, labled "Slices"*/
-		data_container.addColumn('number','Slices');
+		/*This is the function through which we costumize our own set of 
+		 *data, which here in this case is the amount of money 
+		 * that UNHCR allocated to Colombian IDPs and refugees from 2010 to 2012. 
+		 * We'll illustration this data set in the form of a bar chart by using the DataTable recipe*/
+		var stat_sack = new google.visualization.DataTable();
+		/*Add a column of type string, labled ""*/
+		stat_sack.addColumn('string','Year');
+		/*Add a column of type string, labled "Year". The stat here will be represented as a bar in my chart,
+		 * showing each year from 2010 to 2012*/
+		stat_sack.addColumn('number','Total Budget');
 		/* My rows must be a list of lists, with each item in the list
 		 * having the same number of elements as I have columns
 		 * AND with the data types matching those that were declared 
 		 * in my "addColumn" function calls.*/
 		
-		 data_container.addRows([['Mushrooms', 3],['Onions', 1],['Olives', 1],['Zucchini', 1],['Pepperoni', 2]
+		 stat_sack.addRows([['2010', 31000000],['2011', 33000000],['2012', 29000000],
         ]);
-        /*
+        
+        /*The following variable will be an object that can include any property we want our visulization have like a title, width and highth, 
          * 
          * 
          * */
         
-        
-         var customization_options = {'title':'How much money has been allocated for Colombian IDPs and refugees in the past ',
-          'width':400,
-          'height':300};
+         var customization_options = {'title':'Budget that UNHCR allocated in total to displaced Colombians, IDPs and refugees, from 2010 to 2012 ',
+          'width':600,
+          'height':500};
         // Instantiate and draw our chart, passing in some options.
-        var chart = new google.visualization.PieChart(document.getElementById('chart_holder'));
-        chart.draw(data_container, customization_options);
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_holder'));
+        chart.draw(stat_sack, customization_options);
         
 	}
 	</script>
