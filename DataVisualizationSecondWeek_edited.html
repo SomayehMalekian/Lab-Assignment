@@ -79,22 +79,22 @@
 			var stat_sack = new google.visualization.DataTable();
 
 			/*With the following command, I add a column of type string, labled "Year" to show related which year each bar represents*/
-			stat_sack.addColumn('string', 'Year');
+			stat_sack.addColumn('string', 'funded or gap');
 
 			/*Through the following command, I add a column of type string, labled "Tortal Budget". The stat here will show the value on y axis in my chart,
 			 * showing the budget allocated to displaced Colombians in the related year.*/
-			stat_sack.addColumn('number', 'Total Budget');
+			stat_sack.addColumn('number', 'Budget');
 
 			/* My rows must be a list of lists, with each item in the list
 			 * having the same number of elements as I have columns
 			 * AND with the data types matching those that were declared
 			 * in my "addColumn" function calls.*/
-			stat_sack.addRows([['2010', 31000000], ['2011', 34000000], ['2012', 29000000], ['2013', 30000000], ['2014', 29000000], ['2015', 32000000]]);
+			stat_sack.addRows([['Gap', 64870000],['Funded', 5790000]]);
 
 			/*The following variable will be an object that can include any property we want our visulization have including
 			 * a title, width and highth, background color, etc.*/
 			var my_chart_options = {
-				'title' : 'This is a second Copy of the above chart',
+				'title' : 'Proportion of UNHCR budget allocation in Iran',
 				'width' : 600,
 				'height' : 600,
 				'backgroundColor' : '#eeeeee'
@@ -105,7 +105,7 @@
 			* so I just continued my title for now and wrote a comment within the title which I am sure is not the way to do it.*/
 
 			// Instantiate and draw our chart, passing in some options.
-			var UNHCR_budget_allocation_colombia = new google.visualization.ColumnChart(document.getElementById('chart_frame2'));
+			var UNHCR_budget_allocation_colombia = new google.visualization.PieChart(document.getElementById('chart_frame2'));
 			UNHCR_budget_allocation_colombia.draw(stat_sack, my_chart_options);
 
 		}
