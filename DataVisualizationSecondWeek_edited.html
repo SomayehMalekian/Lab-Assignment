@@ -9,7 +9,7 @@
 	<!--Refrences for including a CSS stylesheet. Following is the reference from which I goy the command to access my CSS sheet.
 	https://developers.google.com/chart/interactive/docs/quick_start-->
 	<!--Load Javascript code from the Google Visualization library-->
-	<title>Somayeh's Refugee Story Collection</title>
+	<title>Refugee Stories</title>
 
 	<!-- I got the following line from Bootsrap in order to Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -78,31 +78,31 @@
 		function drawChart2() {
 			var stat_sack = new google.visualization.DataTable();
 
-			/*With the following command, I add a column of type string, labled "Year" to show related which year each bar represents*/
+			/*With the following command, I add a column of type string, labled "funded or gap" to define slices of my pie chart which represent 
+			 * two conditions of the money needed for taking care of refugees in iran, a part is paid by UNHCR which is named "funded" and  
+			 * a part is remained uncovered which is named gap*/
 			stat_sack.addColumn('string', 'funded or gap');
 
-			/*Through the following command, I add a column of type string, labled "Tortal Budget". The stat here will show the value on y axis in my chart,
-			 * showing the budget allocated to displaced Colombians in the related year.*/
+			/*Through the following command, I add a column of type string, which is a number and is labled "Tortal Budget". The stat here will to show 
+			 * the proportion of the budget which is funded by UNHCR to Iran vs. the amount that is remained uncovered*/
 			stat_sack.addColumn('number', 'Budget');
 
 			/* My rows must be a list of lists, with each item in the list
 			 * having the same number of elements as I have columns
 			 * AND with the data types matching those that were declared
 			 * in my "addColumn" function calls.*/
-			stat_sack.addRows([['Gap', 64870000],['Funded', 5790000]]);
+			stat_sack.addRows([['Funded', 5790000],['Gap', 64870000]]);
 
 			/*The following variable will be an object that can include any property we want our visulization have including
 			 * a title, width and highth, background color, etc.*/
 			var my_chart_options = {
-				'title' : 'Proportion of UNHCR budget allocation in Iran',
+				'title' : 'Proportion of UNHCR budget allocation in Iran / Total requested budget was $70.66 million.',
 				'width' : 600,
 				'height' : 600,
 				'backgroundColor' : '#eeeeee'
 			}
-
-			/*QUESTION: I don't know how to add comment within my bar chart. If you remember, the stat for 2013 was as of July of the related year.
-			* I need to explain it within the chart as you had commented in my redesign assignment but I didn't know how,
-			* so I just continued my title for now and wrote a comment within the title which I am sure is not the way to do it.*/
+ //QUESTION: I am looking forward to learn how I can add notes inside of my visualizations...//
+			
 
 			// Instantiate and draw our chart, passing in some options.
 			var UNHCR_budget_allocation_colombia = new google.visualization.PieChart(document.getElementById('chart_frame2'));
@@ -114,14 +114,13 @@
 </head>
 <body>
 
-	
-	<div class="container-fluid">
+	<!--The following div helps me to keep my visualizations (and later if I want to my other divs) in rows side by side.-->
+	<div class="column_dispatcher">
 		
 		<div class="row">
-			
+	<!--I can defines rows in 1 column, 2 column of 6, 3 columns of 4, or 4 columns of 3 visualization-->
 			<div class="col-md-6">
-			<!--This is a div where I want my chart appear and I want reserve the place on the website even before the information is loaded
-			This is to prevent my website from jumping, especially in mobile-app use -->
+			
 			<div id="chart_frame1"></div>
 			</div>
 	
@@ -129,6 +128,7 @@
 			<div id="chart_frame2"></div>
 			</div>
 		</div>
+		
 		<!-- To separate my news pieces, I defined a class "NewsPiece". It will help me to keep different divisions of a news piece separate and will keeps the chance to define specific attributions for all of my news pieces.
 		I even defined the width for my NewsPiece borders hoping that it keeps the box created by my border just around the newspiece not all around the whole page, but it didn't work.
 		-->
