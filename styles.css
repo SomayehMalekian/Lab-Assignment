@@ -30,7 +30,13 @@
 img {
 	width: 100%
 }
-#chart_frame {
+#chart_frame1 {
+width: 600px;
+height: 600px;
+background-color: #eeeeee;
+}
+
+#chart_frame2 {
 width: 600px;
 height: 600px;
 background-color: #eeeeee;
