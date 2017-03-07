@@ -32,13 +32,13 @@ img {
 }
 #chart_frame1 {
 width: 600px;
-height: 600px;
+height: 700px;
 background-color: #eeeeee;
 }
 
 #chart_frame2 {
 width: 600px;
-height: 600px;
+height: 700px;
 background-color: #eeeeee;
 }
 /*The above tag is what i use to define the space that I want the machine allocates to my chart before it is loaded
