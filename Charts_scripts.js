@@ -64,7 +64,7 @@ function drawMyChart1() {
 	UNHCR_budget_allocation_colombia.draw(stat_sack, my_chart_options);
 
 }
-
+	/*Function name........ draw"My"Chart*/ 
 function drawMyChart2() {
 	var stat_sack = new google.visualization.DataTable();
 
